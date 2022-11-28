@@ -1,16 +1,16 @@
-name: Build/Release Electron App
+name: build/release electron app
 
 on:
   push:
-    # Sequence of patterns matched against refs/tags
+    # sequence of patterns matched against refs/tags
     tags:
-      - '*' # Push events to matching any tag format, i.e. 1.0, 20.15.10
+      - '*' # push events to matching any tag format, i.e. 1.0, 20.15.10
 
 env:
-  APP_NAME: ${{ github.event.repository.name }}
+  app_name: ${{ github.event.repository.name }}
 
 jobs:
-    release:
+  release:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -24,15 +24,10 @@ jobs:
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: 14
 
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
         with:
-          # GitHub token, automatically provided to the action
-          # (No need to define this secret in the repo settings)
           github_token: ${{ secrets.github_token }}
-
-          # If the commit is tagged with a version (e.g. "v1.0.0"),
-          # release the app after building
           release: ${{ startsWith(github.ref, 'refs/tags/v') }}
