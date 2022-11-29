@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder -wml"
+    "build": "electron-builder -wl"
   },
   "build": {
     "appId": "logseq.quicknote",
