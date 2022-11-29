@@ -18,11 +18,8 @@ function createWindow() {
   });
 
   win.on("close", function (e) {
-    if (!app.isQuiting) {
-      e.preventDefault();
-      win.hide();
-    }
-    return false;
+    e.preventDefault();
+    win.hide();
   });
 }
 
