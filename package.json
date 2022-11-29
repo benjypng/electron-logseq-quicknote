@@ -1,6 +1,6 @@
 {
   "name": "electron-logseq-quicknote",
-  "version": "0.0.10alpha",
+  "version": "0.0.11alpha",
   "main": "main.js",
   "author": "hkgnp",
   "description": "",
@@ -13,6 +13,9 @@
     "appId": "logseq.quicknote",
     "win": {
       "target": "portable"
+    },
+    "linux": {
+      "target": "AppImage"
     },
     "publish": {
       "provider": "github",
