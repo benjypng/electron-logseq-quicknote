@@ -1,6 +1,6 @@
 {
   "name": "electron-logseq-quicknote",
-  "version": "0.0.13alpha",
+  "version": "0.0.14alpha",
   "main": "main.js",
   "author": "hkgnp",
   "description": "",
