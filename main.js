@@ -11,15 +11,16 @@ function createWindow() {
     },
   });
   win.loadFile("index.html");
+
   win.on("minimize", function (e) {
     e.preventDefault();
-    mainWindow.hide();
+    win.hide();
   });
 
   win.on("close", function (e) {
-    if (!application.isQuiting) {
+    if (!app.isQuiting) {
       e.preventDefault();
-      mainWindow.hide();
+      win.hide();
     }
     return false;
   });
