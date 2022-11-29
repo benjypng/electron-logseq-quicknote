@@ -11,6 +11,18 @@ function createWindow() {
     },
   });
   win.loadFile("index.html");
+  win.on("minimize", function (e) {
+    e.preventDefault();
+    mainWindow.hide();
+  });
+
+  win.on("close", function (e) {
+    if (!application.isQuiting) {
+      e.preventDefault();
+      mainWindow.hide();
+    }
+    return false;
+  });
 }
 
 app.whenReady().then(function () {

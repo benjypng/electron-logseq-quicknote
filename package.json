@@ -1,12 +1,13 @@
 {
   "name": "electron-logseq-quicknote",
-  "version": "0.0.4alpha",
+  "version": "0.0.5alpha",
   "main": "main.js",
   "author": "hkgnp",
   "description": "",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder -w"
   },
   "build": {
     "appId": "logseq.quicknote",
