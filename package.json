@@ -1,21 +1,18 @@
 {
   "name": "electron-logseq-quicknote",
-  "version": "0.0.20alpha",
+  "version": "0.0.21alpha",
   "main": "main.js",
   "author": "hkgnp",
   "description": "",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder -wl"
+    "build": "electron-builder -w"
   },
   "build": {
     "appId": "logseq.quicknote",
     "win": {
       "target": "portable"
-    },
-    "linux": {
-      "target": "AppImage"
     },
     "publish": {
       "provider": "github",
