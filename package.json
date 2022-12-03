@@ -1,6 +1,6 @@
 {
   "name": "electron-logseq-quicknote",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "main.js",
   "author": "hkgnp",
   "description": "",
@@ -24,6 +24,5 @@
   "devDependencies": {
     "electron": "^21.3.1",
     "electron-builder": "^23.6.0"
-  },
-  "dependencies": {}
+  }
 }
